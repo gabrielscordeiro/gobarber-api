@@ -25,6 +25,7 @@
                 "endOfLine": "auto"
             }
         ],
+        "class-methods-use-this":"off",
         "import/extensions": [
             "error",
             "ignorePackages",
