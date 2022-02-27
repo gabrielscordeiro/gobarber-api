@@ -1,5 +1,5 @@
-import { isEqual } from "date-fns";
-import Appointment from "../models/Appoitment";
+import { isEqual } from 'date-fns';
+import Appointment from '../models/Appoitment';
 
 // DTO = Date transfer object
 interface CreateAppointmentDTO {
