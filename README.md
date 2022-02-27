@@ -22,10 +22,6 @@ npm install
 ```jsx
 yarn
 ```
-ou
-```jsx
-yarn install
-```
 + Execute npm start para rodar o projeto em http://localhost:3333/
 ```jsx
 npm start
@@ -39,7 +35,7 @@ O projeto usa o banco de dados *Postgres*. O nome do banco criado é  `gostack_g
 
 Para criar as tabelas do banco de dados, basta rodar as migrations usando o comando
 ```jsx
-npm typeorm migration:run
+npm run typeorm migration:run
 ```
 ou
 ```jsx
