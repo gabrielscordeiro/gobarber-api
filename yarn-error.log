@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add reflact-metadata
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add bcrypt.js
 
 PATH: 
   C:\Users\Gabriel S. Cordeiro\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Gabriel S. Cordeiro\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;D:\www\php-7.1.10;C:\ProgramData\ComposerSetup\bin;C:\PostgreSQL\pg10\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\PuTTY;C:\WINDOWS\System32\OpenSSH;C:\Users\Gabriel S. Cordeiro\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs;C:\Program Files (x86)\GnuPG\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Ruby25-x64\bin;C:\Users\Gabriel S. Cordeiro\AppData\Local\Yarn\bin;C:\Users\Gabriel S. Cordeiro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gabriel S. Cordeiro\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Users\Gabriel S. Cordeiro\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\GitHub CLI;C:\Hugo\bin;C:\Users\Gabriel S. Cordeiro\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/reflact-metadata: Not found
+  Error: https://registry.yarnpkg.com/bcrypt.js: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65003:18)
       at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:129018:22)
       at Request.emit (node:events:520:28)
@@ -44,6 +44,7 @@ npm manifest:
       "date-fns": "^2.28.0",
       "express": "^4.17.3",
       "pg": "^8.7.3",
+      "reflect-metadata": "^0.1.13",
       "typeorm": "^0.2.44",
       "uuid": "^8.3.2"
     },
