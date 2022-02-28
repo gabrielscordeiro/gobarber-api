@@ -5,6 +5,9 @@
     "username": "myusername",
     "password": "mypassword",
     "database": "gostack_gobarber",
+    "entities":[
+        "src/models/*.ts"
+    ],
     "migrations": [
         "src/database/migrations/*.ts"
     ],
