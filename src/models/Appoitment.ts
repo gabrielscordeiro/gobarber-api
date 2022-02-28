@@ -4,7 +4,11 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
+
+import User from './User';
 
 // Ao utilizar o Entity antes da class, está indicando que esse model toda vez que for salvo vai ser armazendo dentro da tabela de appointments
 @Entity('appointments')
@@ -13,7 +17,11 @@ class Appointment {
   id: string;
 
   @Column('varchar')
-  provider: string;
+  provider_id: string;
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'provider_id' })
+  provider: User;
 
   @Column('timestamp with time zone')
   date: Date;
