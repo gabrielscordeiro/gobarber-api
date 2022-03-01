@@ -9,12 +9,12 @@ SessionsRouter.post('/', async (request, response) => {
 
     const authenticateUser = new AuthenticateUserService();
 
-    const { user } = await authenticateUser.execute({ email, password });
+    const { user, token } = await authenticateUser.execute({ email, password });
 
     // @ts-expect-error Aqui vai ocorrer um erro, mas estou ignorando
     delete user.password;
 
-    return response.json({ user });
+    return response.json({ user, token });
   } catch (error: any) {
     return response.status(400).json({
       error: error.message,
