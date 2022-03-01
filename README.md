@@ -1,5 +1,5 @@
 # GoBarber API
-API desenvolvida para o o Projeto GoBarber do Bootcampo GoStack da Rocketseat
+API desenvolvida para o o Projeto GoBarber do Bootcamp GoStack da Rocketseat
 
 
 
