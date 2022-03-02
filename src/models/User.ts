@@ -21,6 +21,9 @@ class User {
   @Column('varchar')
   password: string;
 
+  @Column('varchar')
+  avatar: string | undefined;
+
   @CreateDateColumn()
   created_at: Date;
 
