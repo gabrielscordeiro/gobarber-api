@@ -27,13 +27,13 @@ class AuthenticateUserService {
     });
 
     if (!user) {
-      throw new AppError('Incorrect e-mail/password combination.');
+      throw new AppError('Incorrect e-mail/password combination.', 401);
     }
 
     const passwordMatched = await compare(password, user.password);
 
     if (!passwordMatched) {
-      throw new AppError('Incorrect e-mail/password combination.');
+      throw new AppError('Incorrect e-mail/password combination.', 401);
     }
 
     const { secret, expiresIn } = authConfig.jwt;
