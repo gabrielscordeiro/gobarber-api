@@ -3,6 +3,8 @@ import { decode, verify } from 'jsonwebtoken';
 
 import authConfig from '../config/auth';
 
+import AppError from '../errors/AppError';
+
 interface TokenPayload {
   iat: number;
   exp: number;
@@ -17,7 +19,7 @@ export default function ensureAuthenticated(
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {
-    throw new Error('JWT Token is missing!');
+    throw new AppError('JWT Token is missing!', 401);
   }
   // se não for usar uma variável da desestruturação é só deixar ela em branco. Só colocar a vírgula, e a vírgula já indica que a primeira posição eu não quero, só a segunda
   const [, token] = authHeader.split(' ');
@@ -37,6 +39,6 @@ export default function ensureAuthenticated(
 
     return next();
   } catch {
-    throw new Error('Invalid JWT token');
+    throw new AppError('Invalid JWT token', 401);
   }
 }

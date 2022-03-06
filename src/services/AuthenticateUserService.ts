@@ -1,11 +1,12 @@
 import { getRepository } from 'typeorm';
 import { compare } from 'bcryptjs';
-
 import { sign } from 'jsonwebtoken';
 
 import authConfig from '../config/auth';
 
 import User from '../models/User';
+
+import AppError from '../errors/AppError';
 
 interface IRequestDTO {
   email: string;
@@ -26,13 +27,13 @@ class AuthenticateUserService {
     });
 
     if (!user) {
-      throw new Error('Incorrect e-mail/password combination.');
+      throw new AppError('Incorrect e-mail/password combination.');
     }
 
     const passwordMatched = await compare(password, user.password);
 
     if (!passwordMatched) {
-      throw new Error('Incorrect e-mail/password combination.');
+      throw new AppError('Incorrect e-mail/password combination.');
     }
 
     const { secret, expiresIn } = authConfig.jwt;
